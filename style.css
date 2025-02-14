@@ -1,0 +1,49 @@
+/* This is just to see the boxes */
+div {
+    border: 1px solid red;
+}
+
+/* This is where the layout begins
+GRID */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 2fr 6fr 1fr;
+}
+
+.top {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: coral;
+}
+
+.leftbox {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: rgb(194, 194, 123)
+}
+
+.rightbox {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: lightpink
+}
+
+.bottom {
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+/* FLEXBOX to hold images inside rightbox */
+.flexcontainer {
+    display: flex;
+    flex-wrap: wrap; /*To make our images rearrange if width decreases*/
+}
+
+.child {
+    flex: 40%;
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+    font-size: 30px; 
+}
+
